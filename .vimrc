@@ -82,7 +82,8 @@ if has("autocmd")
 endif " has("autocmd")
 
 " Set my color scheme.
-colorscheme evening
+"colorscheme evening
+"colorscheme desert
 " colorscheme morning
 " colorscheme darkblue
 " Disable auto-backup.
@@ -94,19 +95,23 @@ set shiftwidth=4
 set expandtab
 " Always enable the status line.
 set laststatus=2
-"set mouse=all 
+"set mouse=a
 
 "set gfn=Bitstream\ Vera\ Sans\ Mono\ 10
 
 set showmatch
 
 set tags=tags;
-set tags+=/home/lijing/work/New/empyrean/share/oa-dm4/oa-all-22.43p029/oa/src/tags
+set tags+=/home/lijing/work/New/empyrean_dm5/share/oa-dm5/oa-all-22.50p080/oa/src/tags
 set tags+=/home/lijing/work/New/empyrean/share/qt/qt-everywhere-opensource-src-4.8.7/src/tags
+set tags+=/home/lijing/work/New/empyrean_dm5/share/boost/boost_1_55_0/boost/tags
 set tags+=/home/lijing/work/New/empyrean_dman/share/svn/subversion-1.9.3/subversion/tags
 set tags+=/home/lijing/work/New/empyrean_dman/share/apr/apr-1.5.2/tags
 set tags+=/home/lijing/work/New/empyrean_dman/share/apr-util/apr-util-1.5.4/tags
 "set autochdir
+
+"set enc=utf-8
+set fencs=utf-8,gbk,gb2312,gb18030,big5,cp936,utf-16
 
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplMapWindowsNavVim=1
@@ -153,8 +158,61 @@ set wildmenu
 "设置编辑模式下状态栏标尺显示
 "set ru "set ruler
 
-filetype plugin indent on
+"filetype plugin indent on
 set fileformats=unix,dos
+
+"for omnicppcomplete
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+filetype plugin on
+                set completeopt=menu,menuone  
+                let OmniCpp_MayCompleteDot=1    "打开.操作符
+                let OmniCpp_MayCompleteArrow=1  "打开->操作符
+                let OmniCpp_MayCompleteScope=1  "打开::操作符
+                let OmniCpp_NamespaceSearch=1   "打开命名空间
+                let OmniCpp_GlobalScopeSearch=1  
+                let OmniCpp_DefaultNamespace=["std"]  
+                let OmniCpp_ShowPrototypeInAbbr=1   "打开显示函数原型
+                let OmniCpp_SelectFirstItem = 2     "自动弹出时自动跳至第一个
+
+"for taglist
+"设置ctags路径
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+
+
+"启动vim后自动打开taglist窗口
+let Tlist_Auto_Open = 1
+
+
+"不同时显示多个文件的tag，仅显示一个
+let Tlist_Show_One_File = 1
+
+
+"taglist为最后一个窗口时，退出vim
+let Tlist_Exit_OnlyWindow = 1
+
+
+"taglist窗口显示在右侧，缺省为左侧
+let Tlist_Use_Right_Window =1
+
+
+"设置taglist窗口大小
+"let Tlist_WinHeight = 100
+let Tlist_WinWidth = 40
+
+
+"设置taglist打开关闭的快捷键F8
+noremap <F8> :TlistToggle<CR>
+
+"更新ctags标签文件快捷键设置
+"noremap <F6> :!ctags -R<CR>
+noremap <F6> :!tag<CR>
+  
+"设置单击tab就调转到tag定义的位置
+let Tlist_Use_SingleClick=1
 
 "for go
   if exists("g:did_load_filetypes")
