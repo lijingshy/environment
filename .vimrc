@@ -102,12 +102,7 @@ set laststatus=2
 set showmatch
 
 set tags=tags;
-set tags+=/home/lijing/work/New/empyrean_dm5/share/oa-dm5/oa-all-22.50p080/oa/src/tags
-set tags+=/home/lijing/work/New/empyrean/share/qt/qt-everywhere-opensource-src-4.8.7/src/tags
-set tags+=/home/lijing/work/New/empyrean_dm5/share/boost/boost_1_55_0/boost/tags
-set tags+=/home/lijing/work/New/empyrean_dman/share/svn/subversion-1.9.3/subversion/tags
-set tags+=/home/lijing/work/New/empyrean_dman/share/apr/apr-1.5.2/tags
-set tags+=/home/lijing/work/New/empyrean_dman/share/apr-util/apr-util-1.5.4/tags
+"set tags+=/home/oasis/tags
 "set autochdir
 
 "set enc=utf-8
